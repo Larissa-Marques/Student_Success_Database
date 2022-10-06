@@ -36,14 +36,6 @@
             this.comboBox_year = new System.Windows.Forms.ComboBox();
             this.lbl_GPA = new System.Windows.Forms.Label();
             this.textBox_GPA = new System.Windows.Forms.TextBox();
-            this.listView_students = new System.Windows.Forms.ListView();
-            this.column_ID = new System.Windows.Forms.ColumnHeader();
-            this.column_name = new System.Windows.Forms.ColumnHeader();
-            this.column_major = new System.Windows.Forms.ColumnHeader();
-            this.column_year = new System.Windows.Forms.ColumnHeader();
-            this.column_GPA = new System.Windows.Forms.ColumnHeader();
-            this.column_advisor = new System.Windows.Forms.ColumnHeader();
-            this.column_last_appt = new System.Windows.Forms.ColumnHeader();
             this.lbl_appt_date = new System.Windows.Forms.Label();
             this.dateTimePicker_appt = new System.Windows.Forms.DateTimePicker();
             this.btn_add_student = new System.Windows.Forms.Button();
@@ -58,6 +50,8 @@
             this.btn_risk = new System.Windows.Forms.Button();
             this.checkBox_advisor = new System.Windows.Forms.CheckBox();
             this.btn_edit = new System.Windows.Forms.Button();
+            this.dataView_students = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataView_students)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_name
@@ -141,64 +135,6 @@
             this.textBox_GPA.Name = "textBox_GPA";
             this.textBox_GPA.Size = new System.Drawing.Size(125, 27);
             this.textBox_GPA.TabIndex = 7;
-            // 
-            // listView_students
-            // 
-            this.listView_students.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.column_ID,
-            this.column_name,
-            this.column_major,
-            this.column_year,
-            this.column_GPA,
-            this.column_advisor,
-            this.column_last_appt});
-            this.listView_students.Location = new System.Drawing.Point(37, 325);
-            this.listView_students.Name = "listView_students";
-            this.listView_students.Size = new System.Drawing.Size(711, 121);
-            this.listView_students.TabIndex = 8;
-            this.listView_students.UseCompatibleStateImageBehavior = false;
-            this.listView_students.View = System.Windows.Forms.View.Details;
-            // 
-            // column_ID
-            // 
-            this.column_ID.Text = "Student ID";
-            this.column_ID.Width = 100;
-            // 
-            // column_name
-            // 
-            this.column_name.Text = "Student Name";
-            this.column_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.column_name.Width = 110;
-            // 
-            // column_major
-            // 
-            this.column_major.Text = "Major";
-            this.column_major.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.column_major.Width = 100;
-            // 
-            // column_year
-            // 
-            this.column_year.Text = "Year";
-            this.column_year.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.column_year.Width = 90;
-            // 
-            // column_GPA
-            // 
-            this.column_GPA.Text = "GPA";
-            this.column_GPA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.column_GPA.Width = 80;
-            // 
-            // column_advisor
-            // 
-            this.column_advisor.Text = "Advisor";
-            this.column_advisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.column_advisor.Width = 95;
-            // 
-            // column_last_appt
-            // 
-            this.column_last_appt.Text = "Last Appointment";
-            this.column_last_appt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.column_last_appt.Width = 130;
             // 
             // lbl_appt_date
             // 
@@ -331,11 +267,22 @@
             this.btn_edit.UseVisualStyleBackColor = true;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
+            // dataView_students
+            // 
+            this.dataView_students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataView_students.Location = new System.Drawing.Point(42, 329);
+            this.dataView_students.Name = "dataView_students";
+            this.dataView_students.RowHeadersWidth = 51;
+            this.dataView_students.RowTemplate.Height = 29;
+            this.dataView_students.Size = new System.Drawing.Size(300, 188);
+            this.dataView_students.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 606);
+            this.Controls.Add(this.dataView_students);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.checkBox_advisor);
             this.Controls.Add(this.btn_risk);
@@ -350,7 +297,6 @@
             this.Controls.Add(this.btn_add_student);
             this.Controls.Add(this.dateTimePicker_appt);
             this.Controls.Add(this.lbl_appt_date);
-            this.Controls.Add(this.listView_students);
             this.Controls.Add(this.textBox_GPA);
             this.Controls.Add(this.lbl_GPA);
             this.Controls.Add(this.comboBox_year);
@@ -361,6 +307,7 @@
             this.Controls.Add(this.lbl_name);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataView_students)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,14 +323,6 @@
         private ComboBox comboBox_year;
         private Label lbl_GPA;
         private TextBox textBox_GPA;
-        private ListView listView_students;
-        private ColumnHeader column_ID;
-        private ColumnHeader column_name;
-        private ColumnHeader column_major;
-        private ColumnHeader column_year;
-        private ColumnHeader column_GPA;
-        private ColumnHeader column_advisor;
-        private ColumnHeader column_last_appt;
         private Label lbl_appt_date;
         private DateTimePicker dateTimePicker_appt;
         private Button btn_add_student;
@@ -398,5 +337,6 @@
         private Button btn_risk;
         private CheckBox checkBox_advisor;
         private Button btn_edit;
+        private DataGridView dataView_students;
     }
 }
